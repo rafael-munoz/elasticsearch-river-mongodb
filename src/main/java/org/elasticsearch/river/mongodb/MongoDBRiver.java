@@ -1260,8 +1260,8 @@ public class MongoDBRiver extends AbstractRiverComponent implements River {
 				.prepareGet(riverIndexName, riverName.getName(), namespace)
 				.execute().actionGet();
 				
-		logger.info("XXXXX [Slurper]  getLastTimestamp - riverIndexName={}, name={}, namespace={}",
-						riverIndexName, riverName.getName(), namespace);
+		logger.info("XXXXX [Slurper]  getLastTimestamp - riverIndexName={}, name={}, namespace={}, lastTimestampResponse={}",
+						riverIndexName, riverName.getName(), namespace, lastTimestampResponse);
 				
 		// API changes since 0.90.0 lastTimestampResponse.exists() replaced by
 		// lastTimestampResponse.isExists()
